@@ -1,3 +1,12 @@
 {
-
+  "Artista": [
+    {
+      "id": 1,
+      "nome": "Jim",
+      "cognome": "Morrison",
+      "band": "The Doors",
+      "data_Nascità": "8/12/1943",
+      "album più ascoltato": "The Doors(1967)"
+    }
+  ]
 }
