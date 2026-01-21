@@ -11,7 +11,7 @@ public class Artista {
 
     @Override
     public String toString() {
-        return "id:" + id +",Nome: " + nome + ",Cognome: " + cognome + ",Band: " + band+     ",Data di nascità: " + data_Nascita + ",Album più ascoltato: " + album;
+        return "id:" + id +" ,Nome: " + nome + ",Cognome: " + cognome + ",Band: " + band + ",Data di nascità: " + data_Nascita + ",Album più ascoltato: " + album;
     }
 
     public int getId() {
