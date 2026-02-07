@@ -1,6 +1,5 @@
+[
 {
-  "Artista": [
-    {
       "id": 1,
       "nome": "Jim",
       "cognome": "Morrison",
@@ -8,5 +7,4 @@
       "data_Nascita": "8/12/1943",
       "album": "The Doors(1967)"
     }
-  ]
-}
+]

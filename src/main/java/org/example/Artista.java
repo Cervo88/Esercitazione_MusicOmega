@@ -9,6 +9,15 @@ public class Artista {
     protected String data_Nascita;
     protected String album;
 
+    public Artista(int id, String nome,String cognome,String band, String data_nascita, String album) {
+        this.id = id;
+        this.nome = nome;
+        this.cognome = cognome;
+        this.band = band;
+        this.data_Nascita = data_nascita;
+        this.album = album;
+    }
+
     @Override
     public String toString() {
         return "id:" + id +" ,Nome: " + nome + ",Cognome: " + cognome + ",Band: " + band + ",Data di nascità: " + data_Nascita + ",Album più ascoltato: " + album;

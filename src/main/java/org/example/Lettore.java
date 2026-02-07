@@ -1,5 +1,8 @@
 package org.example;
 
+import java.io.BufferedReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.FileReader;
@@ -23,8 +26,7 @@ public class Lettore extends Thread{
             }
         }
 
-
-        public void leggi () {
+        /*public void leggi () {
             FileReader fr;
             int i;
             try {
@@ -39,7 +41,27 @@ public class Lettore extends Thread{
             } catch (IOException ex) {
                 System.err.println("Errore!");
             }
+        } */
+        public void leggi() {
+            try (BufferedReader br = new BufferedReader(new FileReader(nomeFile))) {
+                String riga;
+                while ((riga = br.readLine()) != null) {
+                    System.out.println(riga);
+                }
+            } catch (IOException e) {
+                System.err.println("Errore lettura file");
+            }
         }
+
+    public List<Artista> leggiJson() {
+        try (Reader reader = new FileReader(nomeFile)) {
+            Type tipoLista = new TypeToken<List<Artista>>() {}.getType();
+            return gson.fromJson(reader, tipoLista);
+        } catch (IOException e) {
+            System.err.println("Errore lettura JSON");
+            return null;
+        }
+    }
 
 
         public void run () {
